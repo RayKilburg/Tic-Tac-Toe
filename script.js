@@ -46,11 +46,8 @@ function handleClick(e) {
         swapTurns()
         setBoardHoverClass()
     }
-    // PlaceMark
-    // Check for win
-    // Check for draw
-    // Switch turns
 }
+
 
 function endGame(draw) {
     if (draw) {
@@ -61,6 +58,7 @@ function endGame(draw) {
     winningMessageElement.classList.add('show')
 }
 
+// Check for draw
 function isDraw() {
     return [...cellElements].every(cell => {
         return cell.classList.contains(XClass) || cell.classList.contains(CircleClass)
@@ -71,7 +69,7 @@ function placeMark(cell, currentClass) {
     cell.classList.add(currentClass)
 }
 
-// swap players
+// Swap players
 function swapTurns() {
     circleTurn = !circleTurn
 }
